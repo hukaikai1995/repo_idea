@@ -54,5 +54,7 @@ public interface UserMapper {
           查询用户拥有的资源信息
      */
     List<Resource> findResourceByRoleId(List<Integer> ids);
+    
+    //测试远程仓库拉取和推送
 
 }
