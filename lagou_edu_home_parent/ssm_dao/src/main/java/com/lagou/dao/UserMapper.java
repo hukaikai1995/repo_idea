@@ -55,6 +55,11 @@ public interface UserMapper {
      */
     List<Resource> findResourceByRoleId(List<Integer> ids);
     
-    //测试远程仓库拉取和推送
+    //测试远程仓库拉取和推送1
+    //测试远程仓库拉取和推送1
+    //测试远程仓库拉取和推送1
+    //测试远程仓库拉取和推送1
+    //测试远程仓库拉取和推送1
+    //测试远程仓库拉取和推送1
 
 }
