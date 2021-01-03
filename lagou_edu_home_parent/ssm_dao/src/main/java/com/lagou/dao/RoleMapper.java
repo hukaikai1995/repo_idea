@@ -1,7 +1,6 @@
 package com.lagou.dao;
 
-import com.lagou.domain.Role;
-import com.lagou.domain.Role_menu_relation;
+import com.lagou.domain.*;
 
 import java.util.List;
 
@@ -41,7 +40,24 @@ public interface RoleMapper {
      */
 
     /*
+        查询当前角色id查询该角色所拥有的资源分类信息
+     */
+    List<ResourceCategory> findAllResourceCategoryByRoleId(Integer id);
+
+    /*
         根据角色id获取当前角色拥有的资源信息
      */
+    List<Resource> findAllResourceByRoleId(Integer id);
+
+    /*
+        根据角色id清空 角色资源的中间表
+     */
+    void deleteRoleContextResource(Integer roleId);
+
+    /*
+        为角色分配资源，向角色资源的中间表添加记录
+     */
+    void roleContextResource(RoleResourceRelation roleResourceRelation);
+
 
 }

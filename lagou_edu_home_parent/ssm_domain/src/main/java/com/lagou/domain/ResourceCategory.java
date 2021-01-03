@@ -1,6 +1,7 @@
 package com.lagou.domain;
 
 import java.util.Date;
+import java.util.List;
 
 public class ResourceCategory {
 
@@ -11,6 +12,31 @@ public class ResourceCategory {
     private Date updatedTime;
     private String createdBy;
     private String updatedBy;
+
+    @Override
+    public String toString() {
+        return "ResourceCategory{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", sort=" + sort +
+                ", createdTime=" + createdTime +
+                ", updatedTime=" + updatedTime +
+                ", createdBy='" + createdBy + '\'' +
+                ", updatedBy='" + updatedBy + '\'' +
+                ", resourceList=" + resourceList +
+                '}';
+    }
+
+    //资源集合，一对多，封装一个资源分类下所拥有的资源
+    private List<Resource> resourceList;
+
+    public List<Resource> getResourceList() {
+        return resourceList;
+    }
+
+    public void setResourceList(List<Resource> resourceList) {
+        this.resourceList = resourceList;
+    }
 
     public Integer getId() {
         return id;

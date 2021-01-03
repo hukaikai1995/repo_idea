@@ -22,7 +22,6 @@ public interface UserMapper {
     User login(User user);
 
 
-
     /*
         根据用户id清空中间表
      */

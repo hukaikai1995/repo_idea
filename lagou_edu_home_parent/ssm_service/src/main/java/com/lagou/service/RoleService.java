@@ -1,7 +1,6 @@
 package com.lagou.service;
 
-import com.lagou.domain.Role;
-import com.lagou.domain.RoleMenuVo;
+import com.lagou.domain.*;
 
 import java.util.List;
 
@@ -26,4 +25,14 @@ public interface RoleService {
         删除角色
      */
     void deleteRole(Integer roleId);
+
+    /*
+        根据角色id获取当前角色拥有的源源分类信息及资源信息
+     */
+    ResponseResult findResourceListByRoleId(Integer id);
+
+    /*
+        为角色分配资源
+     */
+    void roleContextResource(RoleResourceVo roleResourceVo);
 }
